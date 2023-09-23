@@ -36,7 +36,7 @@ class CatagoryFormRequest extends FormRequest
             'required'
          ],
          'image'=>[
-            'required',
+            'nullable',
             'mimes:jpeg,jpg,png'
          ],
          'meta_title'=>[

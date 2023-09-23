@@ -56,5 +56,44 @@ aside{
 	transform: translate(116px, 0px) !important;
 }
  .dropdown-item{
-	color: black !important;
+	color:white;
  }
+
+ .aside-customer {
+	cursor: pointer;
+   }
+   
+   .submenu-angle {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }
+   
+   .submenu-angle.open {
+	height: 100px;
+   }
+   
+   .submenu-angle li {
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }
+   .aside-catagory{
+	cursor: pointer;
+   }
+   .submenu-catagory{
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }
+
+   .submenu-catagory.open {
+	height: 100px;
+   }
+   .submenu-catagory li{
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }

@@ -7,11 +7,11 @@
   <h5 class="card-header">Wiew Catagory 
 	<a href="{{url('admin/catagory-add')}}" class="btn btn-primary btn-sm float-end">Add Catagory</a>
   </h5>
+  <div class="card-body">
   @if (@session('message'))
 	<div class="alert alert-success">{{@session('message')}}</div>
 	</div>
   @endif
-  <div class="card-body">
    <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -29,7 +29,7 @@
 		<td>{{$item->name}}</td>
 		<td><img src="{{ asset('assets/image/catagory/' . $item->image) }}" width="60px" height="60px" alt=""></td>
 		<td>{{$item->status=='1'?'hidden':'shown'}}</td>
-		<td><a href="#" class="btn btn-success mt-3">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
+		<td><a href="{{url('admin/catagory-edit/'.$item->id)}}" class="btn btn-success mt-3">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
 	   </tr>
 	   @endforeach
 	</tbody>
