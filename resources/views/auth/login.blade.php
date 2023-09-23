@@ -42,14 +42,14 @@
 
                         <div class="row mb-3">
                             <div>
-                                <div class="d-flex justify-content-between">
-                                    <div class="loginpass">
+                                <div class="d-flex justify-content-end">
+                                    <!-- <div class="loginpass">
                                         @if (Route::has('password.request'))
                                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                                 {{ __('Forgot Your Password?') }}
                                             </a>
                                         @endif
-                                    </div>
+                                    </div> -->
                                     <div class="logincheck">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" 
                                         @if(old('remember')) 

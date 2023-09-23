@@ -10,7 +10,7 @@ Auth::routes();
 // Route::post('/register', [App\Http\Controllers\RegistrationController::class, 'register'])->name('register');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
     Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'index']);
     Route::get('/add', [App\Http\Controllers\Admin\AddController::class, 'index']);
