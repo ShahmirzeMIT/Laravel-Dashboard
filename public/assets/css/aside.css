@@ -52,3 +52,9 @@ aside{
  {
 	color: skyblue;
  }
+.dropdown-menu{
+	transform: translate(116px, 0px) !important;
+}
+ .dropdown-item{
+	color: black !important;
+ }

@@ -17,5 +17,22 @@ justify-content: space-between;
 main{
 	width: 80%;
 	background-color: white;
-	height: 89vh;
+
+}
+.keepCatData{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.keepCatData > .mb-3{
+	width: 45%;
+}
+
+.keepCatMeta{
+	width: 94%;
+	margin: 0 auto;
+}
+.card{
+	width: 87%;
+	margin: 0 auto;
 }
