@@ -28,6 +28,13 @@ main{
 .keepCatData > .mb-3{
 	width: 45%;
 }
+.desc{
+	width: 95% !important;
+	min-height: 200px !important;
+}
+.desc>textarea{
+	height: 100% !important;
+}
 
 .keepCatMeta{
 	width: 94%;

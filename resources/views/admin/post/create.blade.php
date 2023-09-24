@@ -23,13 +23,14 @@
 						<label for="">Slug</label>
 						<input type="text" name="slug" class="form-control">
 					</div>
-					<div class="mb-3">
-						<label for="">Description</label>
-						<input type="text" name="description" class="form-control">
-					</div>
+					
 					<div class="mb-3">
 						<label for="">Youtube Iframe Link</label>
 						<input type="text" name="yt_iframe" class="form-control">
+					</div>
+					<div class="mb-3 desc">
+						<label for="">Description</label>
+						<textarea name="description" id="my_summernote"  rows="3" class="form-control"></textarea>
 					</div>
 				</div>
 				<div class="keepCatMeta">
