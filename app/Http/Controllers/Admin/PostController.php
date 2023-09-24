@@ -36,7 +36,29 @@ class PostController extends Controller
    $post->status = $request->input('status') === '1';
    $post->created_by=Auth::user()->id;
    $post->save();
-   return redirect("admin/posts")->with('message',"Post Successfuly Created");
+   return redirect("admin/posts")->with('message',"Post Created Successfuly");
+  }
+  public function edit($post_id){
+    $catagory=Catagory::where('status',0)->get();
+    $posts=POst::find($post_id);
+    return view("admin.post.post-edit",compact('posts','catagory'));
+  }
+  
+  public function update(PostFormRequest $request,$post_id){
+    $data=$request->validated();
+    $post= POst::find($post_id);
+    $post->catagory_id=$data['catagory_id'];
+    $post->name=$data['name'];
+    $post->slug=$data['slug'];
+    $post->description=$data['description'];
+    $post->yt_iframe=$data['yt_iframe'];
+    $post->meta_title=$data['meta_title'];
+    $post->meta_description=$data['meta_description'];
+    $post->meta_keyword=$data['meta_keyword'];
+    $post->status = $request->input('status') === '1';
+    $post->created_by=Auth::user()->id;
+    $post->update();
+    return redirect("admin/posts")->with('message',"Post Updated Successfuly");
   }
 
 }

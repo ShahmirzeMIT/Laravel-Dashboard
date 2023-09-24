@@ -20,6 +20,7 @@
 					<th>Catagory</th>
 					<th>Post Name</th>
 					<th>Status</th> 
+					<th>Edit</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -29,6 +30,7 @@
 					<td>{{$postItem->catagory->name}}</td>
 					<td>{{$postItem->name}}</td>
 					<td>{{$postItem-> status == 1 ?"Hidden ":"Visible"}}</td>
+					<td><a href="{{url('admin/post-edit/'.$postItem->id)}}" class="btn btn-success">Edit <i class="fa-solid fa-pen-to-square"></i> </a></td>
 				</tr>
 				@endforeach
 			</tbody>

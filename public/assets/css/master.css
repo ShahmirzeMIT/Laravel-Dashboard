@@ -16,6 +16,7 @@ justify-content: space-between;
 }
 main{
 	width: 80%;
+	min-height: 89vh;
 	background-color: white;
 
 }
