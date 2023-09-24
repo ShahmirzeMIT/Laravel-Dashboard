@@ -89,9 +89,28 @@ aside{
    }
 
    .submenu-catagory.open {
-	height: 100px;
+	height: 60px;
    }
    .submenu-catagory li{
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }
+   .aside-post{
+	cursor: pointer;
+   }
+
+   .submenu-post{
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s ease;
+   }
+
+   .submenu-post.open {
+	height: 60px;
+   }
+   .submenu-post li{
 	height: 30px;
 	width: 100%;
 	overflow: hidden;

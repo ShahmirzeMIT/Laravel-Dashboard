@@ -4,7 +4,7 @@
 	<div class="profile-menu" >
 		<ul>
 			<li><a href="#">Profile</a> </li>
-			<li><a href="#">Log Out <i class="fa-solid fa-right-to-bracket"></i></a> </li>
+			<li><a href="http://127.0.0.1:8000/login">Log Out <i class="fa-solid fa-right-to-bracket"></i></a> </li>
 		</ul>
 	</div>
 

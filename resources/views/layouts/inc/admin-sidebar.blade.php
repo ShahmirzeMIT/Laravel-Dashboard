@@ -19,9 +19,14 @@
                     <span class="" data-bs-toggle="dropdown" aria-expanded="false"> Catagory </span>
                     <ul class="submenu-catagory">
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory">Catagory</a></li>
-                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory-add">Catagory Add</a>
-                        </li>
-                        <!-- <li><a class="dropdown-item" href="">Catagory Update</a></li> -->
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory-add">Catagory Add</a></li>
+                    </ul>
+            </li>
+            <li class="aside-post" onclick="togglePost()"><i class="fa-solid fa-signs-post"></i>
+                    <span class="" data-bs-toggle="dropdown" aria-expanded="false"> Post </span>
+                    <ul class="submenu-post">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/posts">Post</a></li>
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/posts-add">Post Add</a></li>
                     </ul>
             </li>
             <!-- http://127.0.0.1:8000/admin/orders -->

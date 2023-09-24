@@ -10,7 +10,8 @@
 			</div>
 			@endif
 
-			<form action="{{url('admin/catagory-add')}}" method="post" enctype="multipart/form-data"> @csrf <div class="keepCatData">
+			<form action="{{url('admin/catagory-add')}}" method="post" enctype="multipart/form-data"> @csrf 
+				<div class="keepCatData">
 					<div class="mb-3">
 						<label for="" class="mb-2">Catagory Name</label>
 						<input type="text" name="name" id="" class="form-control">
