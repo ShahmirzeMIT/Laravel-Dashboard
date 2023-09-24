@@ -13,7 +13,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
 </head>
 <body>
 <header>
@@ -44,5 +46,27 @@
         $('.dropdown-toggle').dropdown();
     });
 </script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#myDataTable').DataTable();
+    } );
+    $('#myDataTable').DataTable({
+    paging: true
+	});
+// 	$('#myDataTable').DataTable({
+//     ajax: {
+//         url: 'your_api_endpoint', // API endpoint that returns data
+//         dataSrc: 'data' // Key containing the data in the response
+//     },
+//     columns: [
+//         { data: 'name' }, // Replace 'name' with the actual data key
+//         { data: 'email' } // Replace 'email' with the actual data key
+//     ]
+// });
+
+</script>
+
 </body>
 </html>

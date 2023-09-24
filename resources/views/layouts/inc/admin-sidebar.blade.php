@@ -13,24 +13,25 @@
     </div>
     <div class="side-menu">
         <ul class="menu">
-            <li><a href="http://127.0.0.1:8000/admin/dashboard"><i class="fa-solid fa-table-columns"></i>  Dashboard</a></li>
-            <li><a href="http://127.0.0.1:8000/admin/users"><i class="fa-solid fa-user"></i> Users</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/dashboard" class="{{Request::is('admin/dashboard')? 'active':''}}"><i class="fa-solid fa-table-columns"></i>  Dashboard</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/users" class="{{Request::is('admin/users')? 'active':''}}"><i class="fa-solid fa-user"></i> Users</a></li>
             <li class="aside-catagory" onclick="toggleCatagory()"><i class="fa-solid fa-box"></i>
-                    <span class="" data-bs-toggle="dropdown" aria-expanded="false"> Catagory </span>
+                    <span class="{{Request::is('admin/catagory')? 'active':''}}" data-bs-toggle="dropdown" aria-expanded="false"> Catagory </span>
                     <ul class="submenu-catagory">
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory">Catagory</a></li>
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory-add">Catagory Add</a></li>
                     </ul>
             </li>
             <li class="aside-post" onclick="togglePost()"><i class="fa-solid fa-signs-post"></i>
-                    <span class="" data-bs-toggle="dropdown" aria-expanded="false"> Post </span>
+                    <span class="{{Request::is('admin/posts')? 'active':''}}" data-bs-toggle="dropdown" aria-expanded="false"> Post </span>
                     <ul class="submenu-post">
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/posts">Post</a></li>
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/posts-add">Post Add</a></li>
                     </ul>
             </li>
             <!-- http://127.0.0.1:8000/admin/orders -->
-            <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> <span class="mini-click-non">Orders</span>
+            <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> 
+            <span class="mini-click-non {{Request::is('admin/orders')? 'active':''}}">Orders</span>
                 <ul class="submenu-angle" aria-expanded="false">
                     <li><a title="Inbox" href="#"><span class="mini-sub-pro">Inbox</span></a></li>
                     <li><a title="View Mail" href="#"><span class="mini-sub-pro">View Mail</span></a></li>

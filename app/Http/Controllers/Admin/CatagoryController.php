@@ -8,6 +8,8 @@ use App\Http\Requests\Admin\CatagoryFormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Models\Catagory;
+use Illuminate\Support\Str;
+
 class CatagoryController extends Controller
 {
     public function index(){
@@ -25,7 +27,7 @@ class CatagoryController extends Controller
   
         $catagory = new Catagory;
         $catagory->name = $data['name'];
-        $catagory->slug = $data['slug'];
+        $catagory->slug =Str::slug($data['slug']);
         $catagory->description = $data['description'];
     
         if ($request->hasFile('image')) {
@@ -56,7 +58,7 @@ class CatagoryController extends Controller
   
         $catagory =Catagory::find($catagory_id);
         $catagory->name = $data['name'];
-        $catagory->slug = $data['slug'];
+        $catagory->slug = Str::slug($data['slug']);
         $catagory->description = $data['description'];
     
         if ($request->hasFile('image')) {

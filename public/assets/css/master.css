@@ -43,3 +43,6 @@ main{
 .card{
 	width: 90%;
 }
+.active{
+	color: rgb(76, 192, 238) !important;
+}
