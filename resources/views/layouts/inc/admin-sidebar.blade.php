@@ -14,7 +14,7 @@
     <div class="side-menu">
         <ul class="menu">
             <li><a href="http://127.0.0.1:8000/admin/dashboard"><i class="fa-solid fa-table-columns"></i>  Dashboard</a></li>
-            <!-- <li><a href="http://127.0.0.1:8000/admin/catagory"><i class="fa-solid fa-box"></i> Catagory</a></li> -->
+            <li><a href="http://127.0.0.1:8000/admin/users"><i class="fa-solid fa-user"></i> Users</a></li>
             <li class="aside-catagory" onclick="toggleCatagory()"><i class="fa-solid fa-box"></i>
                     <span class="" data-bs-toggle="dropdown" aria-expanded="false"> Catagory </span>
                     <ul class="submenu-catagory">
@@ -30,7 +30,6 @@
                     </ul>
             </li>
             <!-- http://127.0.0.1:8000/admin/orders -->
-            <!-- <li><a href="http://127.0.0.1:8000/admin/users"><i class="fa-solid fa-box"></i> Users</a></li> -->
             <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> <span class="mini-click-non">Orders</span>
                 <ul class="submenu-angle" aria-expanded="false">
                     <li><a title="Inbox" href="#"><span class="mini-sub-pro">Inbox</span></a></li>

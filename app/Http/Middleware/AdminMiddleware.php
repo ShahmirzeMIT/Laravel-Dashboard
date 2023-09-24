@@ -17,6 +17,8 @@ class AdminMiddleware
     {
         if(Auth::check()){
             if(Auth::user()->role_as=='1'){
+                $name=Auth::user()->name;
+                session(['userName' => $name]);
                 return $next($request);
             }
             else{

@@ -1,6 +1,13 @@
 <nav class="mynav">
 	<div class="navimg"><img src="{{asset('assets/image/logo.png')}}" alt=""></div>
-	<div id="openProfile"><i class="fa-solid fa-person"></i> Shahmirze</div>
+	<div id="openProfile">
+		@if(session('userName') == 'Developer')
+		{{session('userName')}} <i class="fa-solid fa-code"></i>
+		@else
+		{{session('userName')}}	<i class="fa-solid fa-person"></i>
+		@endif
+	</div>
+
 	<div class="profile-menu" >
 		<ul>
 			<li><a href="#">Profile</a> </li>

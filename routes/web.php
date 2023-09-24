@@ -26,7 +26,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::put('/post-edit/{post_id}', [App\Http\Controllers\Admin\PostController::class, 'update']);
 
 
-    Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/users', [App\Http\Controllers\Admin\UsersController::class, 'index']);
     Route::get('/add', [App\Http\Controllers\Admin\AddController::class, 'index']);
     Route::get('/addbasket', [App\Http\Controllers\Admin\AddBasketController::class, 'index']);
     Route::get('/addorder', [App\Http\Controllers\Admin\AddOrdersController::class, 'index']);
