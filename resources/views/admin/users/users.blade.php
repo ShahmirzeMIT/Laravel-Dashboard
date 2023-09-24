@@ -4,9 +4,7 @@
 <div class="container-fluid">
 
 <div class="card mt-4">
-  <h5 class="card-header">Wiew Users 
-	<a href="#" class="btn btn-primary btn-sm float-end">Add User</a>
-  </h5>
+  <h5 class="card-header">View Users</h5>
   <div class="card-body">
   @if (@session('message'))
 	<div class="alert alert-success">{{@session('message')}}</div>
@@ -29,7 +27,7 @@
 				<td>{{$userItem->name}}</td>
 				<td>{{$userItem->email}}</td>
 				<td>{{$userItem->role_as}}</td>
-				<td><a href="#" class="btn  btn-success">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
+				<td><a href="{{url('admin/users/'.$userItem->id)}}" class="btn  btn-success">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
 			</tr>
 		@endforeach
 	</tbody>
