@@ -9,6 +9,8 @@ Route::get('/', function () {
 Auth::routes();
 // Route::post('/register', [App\Http\Controllers\RegistrationController::class, 'register'])->name('register');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
@@ -30,7 +32,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->get('/users/{user_id}', [App\Http\Controllers\Admin\UsersController::class, 'edit']);
     Route::middleware(['auth','isDeveloper'])->put('/users/{user_id}', [App\Http\Controllers\Admin\UsersController::class, 'update']);
     
-    
+    Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);
 
     Route::get('/add', [App\Http\Controllers\Admin\AddController::class, 'index']);
     Route::get('/addbasket', [App\Http\Controllers\Admin\AddBasketController::class, 'index']);
@@ -42,6 +44,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/update', [App\Http\Controllers\Admin\UpdatesOrderController::class, 'index']);
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

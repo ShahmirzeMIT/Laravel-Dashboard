@@ -21,5 +21,6 @@ class Catagory extends Model
         'status',
         'created_by'
     ];
+    
 
 }
