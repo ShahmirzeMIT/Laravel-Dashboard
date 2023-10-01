@@ -9,7 +9,7 @@ class NewsController extends Controller
 {
     public function index(){
         $news=News::all();
-        if($news->count()>0 && $news->status==1){
+        if($news->count()>0 || $news->status==1){
             return response()->json([
                 'status'=>200,
                 'news'=>$news
