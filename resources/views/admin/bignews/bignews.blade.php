@@ -30,7 +30,7 @@
 			<td>{{$items->news_id}}{{'      '}}</td>
 			<td>{{$items->title}}</td>
 			<td>{{$items->description}}</td>
-			<td>{{$items->image}}</td>
+			<td> <img src="{{ asset('assets/image/bignews/' . $items->image) }}" alt="" width="90px" height="90px"></td>
 			<td>
 				<a href="{{url('admin/bignews-edit/'.$items->id)}}" class="btn btn-success">
 					Edit <i class="fa-solid fa-pen-to-square"></i>
