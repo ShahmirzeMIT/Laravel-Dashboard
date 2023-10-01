@@ -38,6 +38,8 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->get('/news', [App\Http\Controllers\Api\NewsController::class, 'index']);
     Route::middleware(['auth','isDeveloper'])->get('/news-add', [App\Http\Controllers\Api\NewsController::class, 'create']);
     Route::middleware(['auth','isDeveloper'])->post('/news-add', [App\Http\Controllers\Api\NewsController::class, 'store']);
+    Route::middleware(['auth','isDeveloper'])->get('/news-edit/{news_id}', [App\Http\Controllers\Api\NewsController::class, 'edit']);
+    Route::middleware(['auth','isDeveloper'])->put('/news-edit/{news_id}', [App\Http\Controllers\Api\NewsController::class, 'update']);
 
 
     Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);

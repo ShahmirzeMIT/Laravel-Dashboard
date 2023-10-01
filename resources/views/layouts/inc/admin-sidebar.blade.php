@@ -22,7 +22,7 @@
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/catagory-add">Catagory Add</a></li>
                     </ul>
             </li>
-            <li><a href="http://127.0.0.1:8000/admin/news"><i class="fa-solid fa-box"></i>News</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/news"><i class="fa-solid fa-newspaper"></i> News</a></li>
 
             <li class="aside-post" onclick="togglePost()"><i class="fa-solid fa-signs-post"></i>
                     <span class="{{Request::is('admin/posts')? 'active':''}}" data-bs-toggle="dropdown" aria-expanded="false"> Post </span>

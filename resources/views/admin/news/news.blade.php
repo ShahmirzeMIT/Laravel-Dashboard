@@ -25,7 +25,20 @@
 		</tr>
 	</thead>
 	<tbody>
+	  @foreach($news as $mynews)
+			<tr>
+				<td>{{$mynews->id}}</td>
+				<td>{{$mynews->title}}</td>
+				<td>{{$mynews->description}}</td>
+				<td>
+				<img src="{{ asset('assets/image/news/' . $mynews->image) }}" alt="" width="90px" height="90px">
+				</td>
+				<td>{{$mynews->created_by}}</td>
+				<td>{{$mynews->status}}</td>
+				<td> <a href="{{url('admin/news-edit/'.$mynews->id)}}" style="text-decoration: none;padding: 0 10px; color: green;text-align: center;">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
+			</tr>
 	  
+	  @endforeach
 	</tbody>
    </table>
   </div>
