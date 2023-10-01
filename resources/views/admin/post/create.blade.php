@@ -1,4 +1,6 @@
-@extends('layouts.master')  @section('content') <div class="container-fluid">
+@extends('layouts.master')  
+@section('content') 
+<div class="container-fluid">
 	<div class="card mt-4">
 		<div class="card-header">
 			<h5>Add Posts </h5>

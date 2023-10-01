@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container-fluid">
-Api
+Salam
 </div>
 @endsection

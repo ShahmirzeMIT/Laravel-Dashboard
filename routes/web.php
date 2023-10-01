@@ -32,12 +32,23 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->get('/users/{user_id}', [App\Http\Controllers\Admin\UsersController::class, 'edit']);
     Route::middleware(['auth','isDeveloper'])->put('/users/{user_id}', [App\Http\Controllers\Admin\UsersController::class, 'update']);
     
+
+    Route::middleware(['auth','isDeveloper'])->get('/api', [App\Http\Controllers\Admin\MyApiController::class, 'index']);
+    
+    Route::middleware(['auth','isDeveloper'])->get('/news', [App\Http\Controllers\Api\NewsController::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/news-add', [App\Http\Controllers\Api\NewsController::class, 'create']);
+    Route::middleware(['auth','isDeveloper'])->post('/news-add', [App\Http\Controllers\Api\NewsController::class, 'store']);
+
+
     Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);
+
+
+
+
 
     Route::get('/add', [App\Http\Controllers\Admin\AddController::class, 'index']);
     Route::get('/addbasket', [App\Http\Controllers\Admin\AddBasketController::class, 'index']);
     Route::get('/addorder', [App\Http\Controllers\Admin\AddOrdersController::class, 'index']);
-    Route::get('/api', [App\Http\Controllers\Admin\MyApiController::class, 'index']);
     Route::get('/images', [App\Http\Controllers\Admin\ImagesConroller::class, 'index']);
     Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'index']);
     Route::get('/pagination', [App\Http\Controllers\Admin\PaginationsConroller::class, 'index']);

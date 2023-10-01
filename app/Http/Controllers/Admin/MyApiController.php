@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class MyApiController extends Controller
 {
     public function index(){
-        return view('admin.api');
+        return view('admin.api.api');
     }
 }
