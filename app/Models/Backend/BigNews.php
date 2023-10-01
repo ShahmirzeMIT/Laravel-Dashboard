@@ -4,21 +4,19 @@ namespace App\Models\Backend;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class News extends Model
+use App\Models\Backend\News;
+class BigNews extends Model
 {
     use HasFactory;
-    protected $table='news';
+    protected $table="openhumor";
     protected $fillable=[
+        'news-id',
         'title',
         'description',
-        'image',
-        'created_by',
-        'status'
-    ];
-    protected $casts = [
-        'status' => 'boolean'
+        'image'
     ];
 
-   
+    public function news(){
+        return $this->belongsTo(News::class,'news_id','id');
+    }
 }

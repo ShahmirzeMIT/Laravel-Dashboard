@@ -42,6 +42,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->put('/news-edit/{news_id}', [App\Http\Controllers\Api\NewsController::class, 'update']);
 
 
+    Route::middleware(['auth','isDeveloper'])->get('/bignews', [App\Http\Controllers\Api\BigNewsController::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/bignews-add', [App\Http\Controllers\Api\BigNewsController::class, 'create']);
+    Route::middleware(['auth','isDeveloper'])->post('/bignews-add', [App\Http\Controllers\Api\BigNewsController::class, 'store']);
+    Route::middleware(['auth','isDeveloper'])->get('/bignews-edit/{bignews_id}', [App\Http\Controllers\Api\BigNewsController::class, 'edit']);
+    Route::middleware(['auth','isDeveloper'])->put('/bignews-edit/{bignews_id}', [App\Http\Controllers\Api\BigNewsController::class, 'update']);
+
+
+
     Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);
 
 

@@ -18,7 +18,7 @@
 				</div>
 				<div class="mb-3">
 					<label for="">Description</label>
-					<textarea name="description" id="my_summernote"  rows="3" class="form-control"
+					<textarea name="description"  rows="10" col="10" class="form-control"
 					></textarea>
 				</div>
 				<div class="mb-3">

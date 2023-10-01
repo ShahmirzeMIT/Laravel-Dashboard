@@ -35,7 +35,7 @@
 				</td>
 				<td>{{$mynews->created_by}}</td>
 				<td>{{$mynews->status}}</td>
-				<td> <a href="{{url('admin/news-edit/'.$mynews->id)}}" style="text-decoration: none;padding: 0 10px; color: green;text-align: center;">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
+				<td> <a href="{{url('admin/news-edit/'.$mynews->id)}}" class="btn btn-success">Edit <i class="fa-solid fa-pen-to-square"></i></a></td>
 			</tr>
 	  
 	  @endforeach
