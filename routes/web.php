@@ -48,6 +48,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->get('/bignews-edit/{bignews_id}', [App\Http\Controllers\Api\BigNewsController::class, 'edit']);
     Route::middleware(['auth','isDeveloper'])->put('/bignews-edit/{bignews_id}', [App\Http\Controllers\Api\BigNewsController::class, 'update']);
 
+    
+    Route::middleware(['auth','isDeveloper'])->get('/blog', [App\Http\Controllers\Api\BlogController::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/blog-add', [App\Http\Controllers\Api\BlogController::class, 'create']);
+    Route::middleware(['auth','isDeveloper'])->post('/blog-add', [App\Http\Controllers\Api\BlogController::class, 'store']);
+    Route::middleware(['auth','isDeveloper'])->get('/blog-edit/{blog_id}', [App\Http\Controllers\Api\BlogController::class, 'edit']);
+    Route::middleware(['auth','isDeveloper'])->put('/blog-edit/{blog_id}', [App\Http\Controllers\Api\BlogController::class, 'update']);
+
+
 
 
     Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);

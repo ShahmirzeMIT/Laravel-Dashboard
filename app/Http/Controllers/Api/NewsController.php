@@ -71,7 +71,7 @@ class NewsController extends Controller
         }
     
         $news->created_by = Auth::user()->id;
-        $news->save();
+        $news->update();
     
         return redirect('admin/news')->with('message', 'News Updated Successfully');
     }

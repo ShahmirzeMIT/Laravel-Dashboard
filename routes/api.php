@@ -20,5 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/news',[App\Http\Controllers\FrontendApi\NewsController::class ,'index']);
 Route::get('/bignews/{news_id}',[App\Http\Controllers\FrontendApi\BigNewsController::class ,'index']);
+Route::get('/blog',[App\Http\Controllers\FrontendApi\BloController::class ,'index']);
 
 
