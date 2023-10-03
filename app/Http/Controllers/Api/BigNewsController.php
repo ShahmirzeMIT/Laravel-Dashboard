@@ -55,7 +55,6 @@ class BigNewsController extends Controller
             return redirect('admin/bignews')->with('message', 'News ID already exists for a BigNews.');
         }
     }
-
     $bignews->news_id = $data['news-id'];
     $bignews->title=$data['title'];
     $bignews->description=$data['description'];

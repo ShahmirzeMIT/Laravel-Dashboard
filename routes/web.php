@@ -54,7 +54,11 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->post('/blog-add', [App\Http\Controllers\Api\BlogController::class, 'store']);
     Route::middleware(['auth','isDeveloper'])->get('/blog-edit/{blog_id}', [App\Http\Controllers\Api\BlogController::class, 'edit']);
     Route::middleware(['auth','isDeveloper'])->put('/blog-edit/{blog_id}', [App\Http\Controllers\Api\BlogController::class, 'update']);
-
+   
+   
+    Route::middleware(['auth','isDeveloper'])->get('/images', [App\Http\Controllers\Admin\ImagesConroller::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/images-add', [App\Http\Controllers\Admin\ImagesConroller::class, 'create']);
+    Route::middleware(['auth','isDeveloper'])->post('/images-add', [App\Http\Controllers\Admin\ImagesConroller::class, 'store']);
 
 
 
@@ -67,7 +71,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/add', [App\Http\Controllers\Admin\AddController::class, 'index']);
     Route::get('/addbasket', [App\Http\Controllers\Admin\AddBasketController::class, 'index']);
     Route::get('/addorder', [App\Http\Controllers\Admin\AddOrdersController::class, 'index']);
-    Route::get('/images', [App\Http\Controllers\Admin\ImagesConroller::class, 'index']);
+   
     Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'index']);
     Route::get('/pagination', [App\Http\Controllers\Admin\PaginationsConroller::class, 'index']);
     Route::get('/update', [App\Http\Controllers\Admin\UpdatesOrderController::class, 'index']);

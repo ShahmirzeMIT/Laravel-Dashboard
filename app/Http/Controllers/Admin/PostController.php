@@ -26,6 +26,10 @@ class PostController extends Controller
  public function store(PostFormRequest $request){
    $data=$request->validated();
    $post=new POst;
+   $exsistCatagory=POst::where('catagory_id',$data['catagory_id'])->first();
+   if($exsistCatagory){
+    return \redirect('admin/posts')->with('message','Caragory ID already exists for a Posts.');
+   }
    $post->catagory_id=$data['catagory_id'];
    $post->name=$data['name'];
    $post->slug=Str::slug($data['slug']);
@@ -48,6 +52,13 @@ class PostController extends Controller
   public function update(PostFormRequest $request,$post_id){
     $data=$request->validated();
     $post= POst::find($post_id);
+    if($post->catagory_id!==$data['catagory_id']){
+     $exsistCatagory=POst::where('catagory_id',$data['catagory_id'])->first();
+     if ($existingBigNews) {
+        return redirect('admin/posts')->with('message', 'Catagory ID already exists for a Posts.');
+      }
+    }
+
     $post->catagory_id=$data['catagory_id'];
     $post->name=$data['name'];
     $post->slug=Str::slug($data['slug']);

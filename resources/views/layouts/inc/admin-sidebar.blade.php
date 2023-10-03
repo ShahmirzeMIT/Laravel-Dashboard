@@ -33,8 +33,9 @@
                         <li><a class="dropdown-item" href="http://127.0.0.1:8000/admin/posts-add">Post Add</a></li>
                     </ul>
             </li>
+            <li><a href="http://127.0.0.1:8000/admin/images"><i class="fa-solid fa-box"></i> Images</a></li>
             <!-- http://127.0.0.1:8000/admin/orders -->
-            <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> 
+            <!-- <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> 
             <span class="mini-click-non {{Request::is('admin/orders')? 'active':''}}">Orders</span>
                 <ul class="submenu-angle" aria-expanded="false">
                     <li><a title="Inbox" href="#"><span class="mini-sub-pro">Inbox</span></a></li>
@@ -44,10 +45,10 @@
             </li>
             <li><a href="http://127.0.0.1:8000/admin/addorder"><i class="fa-solid fa-box"></i> Add Orders</a></li>
             <li><a href="http://127.0.0.1:8000/admin/update"><i class="fa-solid fa-box"></i> Updates Orders</a></li>
-            <li><a href="http://127.0.0.1:8000/admin/images"><i class="fa-solid fa-box"></i> Images</a></li>
+          
             <li><a href="http://127.0.0.1:8000/admin/pagination"><i class="fa-solid fa-box"></i> Paginations</a></li>
             <li><a href="http://127.0.0.1:8000/admin/addbasket"><i class="fa-solid fa-box"></i> Add Basket</a></li>
-            <li><a href="http://127.0.0.1:8000/admin/api"><i class="fa-solid fa-box"></i> Api's</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/api"><i class="fa-solid fa-box"></i> Api's</a></li> -->
         </ul>
     </div>
     <script src="{{asset('assets/js/aside-customer.js')}}"></script>
