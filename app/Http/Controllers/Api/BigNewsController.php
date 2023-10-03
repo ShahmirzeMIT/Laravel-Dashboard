@@ -21,6 +21,10 @@ class BigNewsController extends Controller
   
   public function store(BigNewsFromRequest $request){
     $data=$request->validated();
+    $existingBigNews = BigNews::where('news_id', $data['news-id'])->first();
+    if ($existingBigNews) {
+        return redirect('admin/bignews')->with("message", "News ID already exists for a BigNews.");
+    }
     $bignews=new BigNews;
     $bignews->news_id=$data['news-id'];
     $bignews->title=$data['title'];
@@ -45,7 +49,14 @@ class BigNewsController extends Controller
   public function update(BigNewsFromRequest $request,$bignews_id){
     $data=$request->validated();
     $bignews=BigNews::find($bignews_id);
-    $bignews->news_id=$data['news-id'];
+    if ($bignews->news_id !== $data['news-id']) {
+        $existingBigNews = BigNews::where('news_id', $data['news-id'])->first();
+        if ($existingBigNews) {
+            return redirect('admin/bignews')->with('message', 'News ID already exists for a BigNews.');
+        }
+    }
+
+    $bignews->news_id = $data['news-id'];
     $bignews->title=$data['title'];
     $bignews->description=$data['description'];
     if ($request->hasFile('image')) {
