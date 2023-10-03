@@ -12,7 +12,7 @@
 	<div class="alert alert-success">{{@session('message')}}</div>
 	</div>
   @endif
-   <table id="myDataTable" class="table table-bordered">
+   <table " class="table table-bordered my-2">
 	<thead>
 		<tr>
 			<th>Id</th>
@@ -34,6 +34,7 @@
 	   @endforeach
 	</tbody>
    </table>
+   {{$catagory->links('pagination::bootstrap-5')}}
   </div>
 </div>
 </div>

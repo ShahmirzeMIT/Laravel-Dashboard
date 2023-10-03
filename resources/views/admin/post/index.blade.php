@@ -13,7 +13,7 @@
 	<div class="alert alert-success">{{@session('message')}}</div>
 	</div>
 	@endif
-		<table id="myDataTable" class="table table-bordered">
+		<table  class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -35,6 +35,7 @@
 				@endforeach
 			</tbody>
 		</table>
+		{{$posts->links('pagination::bootstrap-5')}}
 	</div>
 </div>
 </div>

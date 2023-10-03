@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
   public function index(){
-    $user=User::all();
+    $user=User::paginate(5);
     return view('admin.users.users',compact('user'));
   }
 

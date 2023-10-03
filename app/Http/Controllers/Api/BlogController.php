@@ -11,7 +11,7 @@ use App\Models\Backend\Blog;
 class BlogController extends Controller
 {
     public function index(){
-        $blog=Blog::all();
+        $blog=Blog::paginate(2);
         return view('admin.blog.blog',compact('blog'));
     }
 

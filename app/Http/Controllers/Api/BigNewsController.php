@@ -11,7 +11,7 @@ use App\Models\Backend\BigNews;
 class BigNewsController extends Controller
 {
   public function index(){
-    $bignews=BigNews::all();
+    $bignews=BigNews::paginate(1);
     return view('admin.bignews.bignews',compact('bignews'));
   }
   public function create(){

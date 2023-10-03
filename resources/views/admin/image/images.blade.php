@@ -11,7 +11,7 @@
   @if (session('message'))
 	<div class="alert alert-success">{{ session('message') }}</div>
   @endif
-   <table id="myDataTable" class="table table-bordered">
+   <table  class="table table-bordered">
 	<thead>
 		<tr>
 			<th>Id</th>
@@ -42,6 +42,7 @@
 		@endforeach
 	</tbody>
    </table>
+   {{$images->links('pagination::bootstrap-5')}}
   </div>
 </div>
 </div>

@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 class CatagoryController extends Controller
 {
     public function index(){
-        $catagory=Catagory::all();
+        $catagory=Catagory::paginate(5);
         return view('admin.catagory',compact('catagory'));
     }
 

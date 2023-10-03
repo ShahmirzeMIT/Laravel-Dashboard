@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 class ImagesConroller extends Controller
 {
     public function index(){
-        $images = Images::all();
+        $images = Images::paginate(3);
         return view('admin.image.images', ['images' => $images]);
     }
 
