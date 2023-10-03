@@ -7,6 +7,8 @@
      {{ session('status') }}
 </div>
 @endif
-kfdfdkjgdfghjbf
+<video width="1000" height="570" controls>
+  <source src="{{asset('assets/video/my.mp4')}}" type="video/mp4">
+</video>
 </div>
 @endsection
