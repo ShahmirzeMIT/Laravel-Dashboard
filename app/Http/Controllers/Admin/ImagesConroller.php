@@ -26,7 +26,7 @@ class ImagesConroller extends Controller
         
         $data = $request->validated();
         foreach ($request->file('image') as $image) {
-            $images = new Images();
+            $images = new Images;
             $images->status = $data['status'];
             $filename = time() . '.' . $image->getClientOriginalName();
             $image->move('assets/image/images', $filename);

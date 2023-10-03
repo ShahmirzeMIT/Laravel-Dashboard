@@ -2,7 +2,7 @@
 @section('content') 
 <div class="container-fluid">
 	<div class="card mt-3">
-		<h3 class="card-header">Catagory Add</h3>
+		<h3 class="card-header">Image Add</h3>
 		<div class="card-body"> 
 			@if($errors->any()) <div class="alert alert-danger">
 				 @foreach($errors->all() as $error)
@@ -23,7 +23,7 @@
 					</select>
 				</div>
 				<div class="col-md-3 mb-3">
-					<button type="submit" class="btn btn-primary">Save Catagory</button>
+					<button type="submit" class="btn btn-primary">Save Image</button>
 				</div>
 		</div>
 	</div>

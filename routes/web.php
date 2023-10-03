@@ -60,6 +60,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::middleware(['auth','isDeveloper'])->get('/images-add', [App\Http\Controllers\Admin\ImagesConroller::class, 'create']);
     Route::middleware(['auth','isDeveloper'])->post('/images-add', [App\Http\Controllers\Admin\ImagesConroller::class, 'store']);
 
+    Route::middleware(['auth','isDeveloper'])->get('/video', [App\Http\Controllers\Admin\VideoController::class, 'index']);
+    Route::middleware(['auth','isDeveloper'])->get('/video-add', [App\Http\Controllers\Admin\VideoController::class, 'create']);
+    Route::middleware(['auth','isDeveloper'])->post('/video-add', [App\Http\Controllers\Admin\VideoController::class, 'store']);
 
 
     Route::get('/profile',[App\Http\Controllers\Admin\ProfileController::class, 'index']);

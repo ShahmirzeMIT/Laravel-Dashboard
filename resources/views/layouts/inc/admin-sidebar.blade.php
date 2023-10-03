@@ -34,6 +34,7 @@
                     </ul>
             </li>
             <li><a href="http://127.0.0.1:8000/admin/images"><i class="fa-solid fa-box"></i> Images</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/video"><i class="fa-solid fa-box"></i> Video</a></li>
             <!-- http://127.0.0.1:8000/admin/orders -->
             <!-- <li class="aside-customer" onclick="toggleSubMenu()"><i class="fa-brands fa-intercom"></i> 
             <span class="mini-click-non {{Request::is('admin/orders')? 'active':''}}">Orders</span>
